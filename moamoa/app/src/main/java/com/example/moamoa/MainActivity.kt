@@ -1,6 +1,7 @@
 package com.example.moamoa
 
 import android.content.Intent
+import android.nfc.Tag
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -48,28 +49,14 @@ class MainActivity : AppCompatActivity(), MyRecyclerviewInterface {
 
             // 어답터 장착
             adapter = myRecyclerAdapter
+
+
         }
 
     }
 
     override fun onItemClicked(position: Int) {
-        Log.d(TAG, "MainActivity - onItemClicked() called / position: $position")
-
-        var title: String? = null
-
-        // 값이 비어있으면 ""를 넣는다.
-        // unwrapping - 언랩핑
-
-        val titleClick: String = this.modelList[position].title ?: ""
-
-        AlertDialog.Builder(this)
-            .setTitle(titleClick)
-            .setMessage("$titleClick")
-            .setPositiveButton("닫기") { dialog, id ->
-                Log.d(TAG, "MainActivity - 다이얼로그 확인 버튼 클릭했음")
-            }
-            .show()
-
+        Log.d(TAG, "position: " + position)
     }
 
     fun onClick(v: View) {

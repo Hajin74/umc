@@ -1,12 +1,18 @@
 package com.example.umc_hackathon
 
+import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.content.ContextCompat
+import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.moamoa.FormInputActivity
+import com.example.moamoa.MainActivity
 import com.example.moamoa.MyModel
 import com.example.moamoa.R
+
 
 class MyRecyclerAdapter(myRecyclerviewInterface: MyRecyclerviewInterface): RecyclerView.Adapter<MyViewHolder>() {
 
@@ -39,6 +45,10 @@ class MyRecyclerAdapter(myRecyclerviewInterface: MyRecyclerviewInterface): Recyc
         holder.bind(this.modelList[position])
         //클릭 설정
         holder.itemView.setOnClickListener {
+//            Log.d("리사이클러뷰 항목 선택", "선택 : " + position)
+
+//            val intent: Intent = Intent(holder.itemView?.context, FormInputActivity::class.java)
+//            ContextCompat.startActivity(holder.itemView.context, intent, null)
         }
     }
 
