@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F2F3F7"
-    android:backgroundTint="#F2F3F7"
-    android:padding="0dp"
-    tools:context=".FormInputActivity">
-
+    tools:context=".FormCreateActivity">
 
     <ScrollView
         android:id="@+id/scrollView2"
@@ -47,7 +42,7 @@
                 android:layout_gravity="center_horizontal"
                 android:layout_marginBottom="15dp"
                 android:fontFamily="sans-serif-thin"
-                android:text="설문참여"
+                android:text="설문조사 작성"
                 android:textColor="#000000"
                 android:textSize="30dp"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -82,7 +77,6 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/q1_form_input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="1. 선호하는 브랜드가 있다면 무엇인가요?"
@@ -90,7 +84,6 @@
                         android:textSize="20dp" />
 
                     <EditText
-                        android:id="@+id/a1_form_input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         tools:ignore="SpeakableTextPresentCheck,DuplicateClickableBoundsCheck" />
@@ -123,7 +116,6 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/q2_form_input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="2. 해당 브랜드를 선호하는 이유는 무엇인가요?"
@@ -131,7 +123,6 @@
                         android:textSize="20dp" />
 
                     <EditText
-                        android:id="@+id/a2_form_input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         tools:ignore="SpeakableTextPresentCheck" />
@@ -164,7 +155,6 @@
                     android:orientation="vertical">
 
                     <TextView
-                        android:id="@+id/q3_form_input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="3. 해당 브랜드에 방문하거나 제품을 구입하는 횟수를 선택해 주세요."
@@ -172,36 +162,30 @@
                         android:textSize="20dp" />
 
                     <RadioGroup
-                        android:id="@+id/a3_form_input"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content">
 
                         <RadioButton
-                            android:id="@+id/a3_rb1"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="한달에 1-2번" />
 
                         <RadioButton
-                            android:id="@+id/a3_rb2"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="일주일에 1번" />
 
                         <RadioButton
-                            android:id="@+id/a3_rb3"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="일주일에 3-4번" />
 
                         <RadioButton
-                            android:id="@+id/a3_rb4"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="매일" />
 
                         <RadioButton
-                            android:id="@+id/a3_rb5"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:text="기타" />
@@ -221,7 +205,7 @@
                 android:layout_marginBottom="20dp"
                 android:background="@drawable/btn_style"
                 android:gravity="center_horizontal|center_vertical"
-                android:text="제출"
+                android:text="질문 추가"
                 android:textColor="#000000"
                 android:textColorHint="#000000"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -235,5 +219,4 @@
         </LinearLayout>
 
     </ScrollView>
-
 </androidx.constraintlayout.widget.ConstraintLayout>
