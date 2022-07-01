@@ -13,12 +13,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Moamoa"
         tools:targetApi="31">
-        <activity
-            android:name=".FormCreateActivity"
-            android:exported="false" />
-        <activity
-            android:name=".FormInputActivity"
-            android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
@@ -28,6 +23,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name=".FormCreateActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".FormInputActivity"
+            android:exported="false" />
+
     </application>
 
 </manifest>
