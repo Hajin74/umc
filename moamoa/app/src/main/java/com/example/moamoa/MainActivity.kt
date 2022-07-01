@@ -1,8 +1,10 @@
 package com.example.moamoa
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.moamoa.MyModel
@@ -70,8 +72,9 @@ class MainActivity : AppCompatActivity(), MyRecyclerviewInterface {
 
     }
 
-//    public void onClick(View v) {
-//
-//    }
+    fun onClick(v: View) {
+        var intent: Intent = Intent(this, FormCreateActivity::class.java)
+        startActivity(intent)
+    }
 
 }
