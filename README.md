@@ -1,3 +1,2 @@
-# umc
-umc-hackathon
+# umc-hackathon
 android
