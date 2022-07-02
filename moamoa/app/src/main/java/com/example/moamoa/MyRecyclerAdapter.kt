@@ -27,6 +27,17 @@ class MyRecyclerAdapter(myRecyclerviewInterface: MyRecyclerviewInterface): Recyc
         this.myRecyclerviewInterface = myRecyclerviewInterface
     }
 
+    // 외부에서 클릭이벤트 사용할 수 잇게 하려고
+//    interface MyItemClickListener {
+//        fun onItemClick()
+//    }
+//
+//    private lateinit var mItemClickListener: MyItemClickListener
+//
+//    fun setMyItemClickListener(itemClickListener: MyItemClickListener) {
+//        mItemClickListener = itemClickListener
+//    }
+
     // 뷰홀더가 생성 되었을때
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): MyViewHolder {
 
@@ -45,10 +56,10 @@ class MyRecyclerAdapter(myRecyclerviewInterface: MyRecyclerviewInterface): Recyc
         holder.bind(this.modelList[position])
         //클릭 설정
         holder.itemView.setOnClickListener {
-//            Log.d("리사이클러뷰 항목 선택", "선택 : " + position)
+            Log.d("리사이클러뷰 항목 선택", "선택 : " + position)
 
-//            val intent: Intent = Intent(holder.itemView?.context, FormInputActivity::class.java)
-//            ContextCompat.startActivity(holder.itemView.context, intent, null)
+            val intent: Intent = Intent(holder.itemView?.context, FormInputActivity::class.java)
+            ContextCompat.startActivity(holder.itemView.context, intent, null)
         }
     }
 

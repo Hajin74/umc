@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AlertDialog
 import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.example.moamoa.MyModel
 import com.example.moamoa.R
 import com.example.umc_hackathon.MyRecyclerAdapter
@@ -20,6 +21,7 @@ class MainActivity : AppCompatActivity(), MyRecyclerviewInterface {
 
     // 데이터를 담을 그릇 즉 배열
     var modelList = ArrayList<MyModel>()
+//    var recyclerView: View = findViewById<View>(R.id.my_recycler_view)
 
     private lateinit var myRecyclerAdapter: MyRecyclerAdapter
 
@@ -45,20 +47,19 @@ class MainActivity : AppCompatActivity(), MyRecyclerviewInterface {
         my_recycler_view.apply {
 
             // 리사이클러뷰 방향 등 설정
-            layoutManager = LinearLayoutManager(this@MainActivity, LinearLayoutManager.VERTICAL, false)
+            this.layoutManager = LinearLayoutManager(this@MainActivity, LinearLayoutManager.VERTICAL, false)
 
             // 어답터 장착
-            adapter = myRecyclerAdapter
-
+            this.adapter = this@MainActivity.myRecyclerAdapter
 
         }
-
     }
 
     override fun onItemClicked(position: Int) {
         Log.d(TAG, "position: " + position)
     }
 
+    // 설문조사 작성 버튼
     fun onClick(v: View) {
         var intent: Intent = Intent(this, FormCreateActivity::class.java)
         startActivity(intent)
