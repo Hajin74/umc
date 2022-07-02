@@ -4,12 +4,9 @@ import android.content.Intent
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.content.ContextCompat
-import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
 import com.example.moamoa.FormInputActivity
-import com.example.moamoa.MainActivity
 import com.example.moamoa.MyModel
 import com.example.moamoa.R
 
