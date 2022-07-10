@@ -20,7 +20,13 @@ public class FormCreateActivity extends AppCompatActivity {
                 finish();
                 break;
             case R.id.btn_form_create_add:
-
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setTitle("질문 추가")
+                        .setIcon(R.mipmap.coin)
+//                        .setView(R.layout.activity_intro_dev)
+                        .setPositiveButton("확인", null)
+                        .setCancelable(false)
+                        .show();
                 break;
         }
     }
