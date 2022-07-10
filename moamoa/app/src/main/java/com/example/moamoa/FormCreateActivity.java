@@ -1,5 +1,6 @@
 package com.example.moamoa;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -17,6 +18,9 @@ public class FormCreateActivity extends AppCompatActivity {
         switch(v.getId()) {
             case R.id.btn_form_create_cancel:
                 finish();
+                break;
+            case R.id.btn_form_create_add:
+
                 break;
         }
     }
